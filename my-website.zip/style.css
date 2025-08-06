@@ -1,0 +1,275 @@
+/* إعدادات عامة */
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background: #f0f2f5 url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+/* شريط التنقل */
+nav {
+  background-color: rgba(51, 51, 51, 0.95);
+  padding: 6px 0; /* تصغير الارتفاع */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px; /* تصغير المسافات */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px; /* خط أصغر */
+  padding: 6px 10px; /* مساحة داخلية أصغر */
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #00d9ff;
+  color: #333;
+}
+
+
+header {
+  padding: 20px 10px; /* تصغير الارتفاع */
+  background: linear-gradient(45deg, #2196F3, #21CBF3);
+  color: white;
+  text-align: center;
+  border-bottom: 3px solid #1976d2; /* شريط سفلي أنحف */
+}
+
+header img {
+  width: 90px; /* تصغير الصورة */
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  margin-bottom: 8px;
+}
+
+header h1 {
+  font-size: 20px; /* تصغير العنوان */
+  margin: 5px 0;
+}
+
+header p {
+  font-size: 14px; /* تصغير الوصف */
+  margin: 0;
+}
+
+
+/* أقسام الموقع */
+section {
+  padding: 20px;
+}
+
+/* الأزرار */
+button,
+a.button-link {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+a.button-link:hover {
+  background-color: #1976d2;
+}
+
+/* الكروت */
+.card,
+.project-card,
+.skill-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.project-card:hover,
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* صور الكروت */
+.card img,
+.project-card img,
+.skill-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* شبكة المشاريع */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* وسوم النوع */
+.type-label {
+  display: inline-block;
+  background-color: #eee;
+  color: #333;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+/* أزرار الفلترة */
+.filter-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  margin: 0 5px;
+}
+
+/* صفحة المهارات */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* صفحة التواصل */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* استجابة الموبايل */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.btn-link {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.demo-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.demo-btn:hover {
+  background-color: #43a047;
+}
+
+.code-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.code-btn:hover {
+  background-color: #1976d2;
+}
+
+.back-btn {
+  background-color: #555;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #333;
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.project-card img {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}

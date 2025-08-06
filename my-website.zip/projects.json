@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "title": "موقع تعليمي",
+    "description": "موقع لتعليم البرمجة للمبتدئين بطريقة سهلة ومنظمة.",
+    "image": "images/icons/project1-1.png",
+    "type": "موقع",
+    "demo": "https://w3schools.com",
+    "code": "https://github.com/mdn/learning-area",
+    "gallery": [
+      "images/icons/project1-1.png",
+      "images/icons/project1-2.png",
+      "images/icons/project1-3.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "تطبيق إدارة المهام",
+    "description": "تطبيق يساعد المستخدم على إضافة وحذف وتعديل المهام اليومية.",
+    "image": "images/icons/project2-1.png",
+    "type": "تطبيق",
+    "demo": "https://todoist.com",
+    "code": "https://github.com/tastejs/todomvc",
+    "gallery": [
+      "images/icons/project2-1.png",
+      "images/icons/project2-2.png",
+      "images/icons/project2-3.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "واجهة تسجيل دخول",
+    "description": "واجهة مستخدم بسيطة مع التحقق من البيانات قبل الإرسال.",
+    "image": "images/icons/project3-1.png",
+    "type": "واجهة",
+    "demo": "https://codepen.io/login",
+    "code": "https://github.com/login",
+    "gallery": [
+      "images/icons/project3-1.png",
+      "images/icons/project3-2.png",
+      "images/icons/project3-3.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "موقع عرض كورسات",
+    "description": "صفحة تحتوي على قائمة كورسات برمجية مع إمكانية عرض التفاصيل.",
+    "image": "images/icons/project4-1.png",
+    "type": "موقع",
+    "demo": "https://coursera.org",
+    "code": "https://github.com/coursera",
+    "gallery": [
+      "images/icons/project4-1.png",
+      "images/icons/project4-2.png",
+      "images/icons/project4-3.png"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "تطبيق آلة حاسبة",
+    "description": "تطبيق ويب بسيط لإجراء العمليات الحسابية الأساسية.",
+    "image": "images/icons/project5-1.png",
+    "type": "تطبيق",
+    "demo": "https://www.online-calculator.com/",
+    "code": "https://github.com/josdejong/mathjs",
+    "gallery": [
+      "images/icons/project5-1.png",
+      "images/icons/project5-2.png",
+      "images/icons/project5-3.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "مدونة شخصية",
+    "description": "مدونة بسيطة لعرض المقالات والخواطر.",
+    "image": "images/icons/project6-1.png",
+    "type": "موقع",
+    "demo": "https://wordpress.com",
+    "code": "https://github.com/WordPress/WordPress",
+    "gallery": [
+      "images/icons/project6-1.png",
+      "images/icons/project6-2.png",
+      "images/icons/project6-3.png"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "موقع متجر إلكتروني",
+    "description": "متجر إلكتروني بسيط لبيع المنتجات.",
+    "image": "images/icons/project7-1.png",
+    "type": "موقع",
+    "demo": "https://shopify.com",
+    "code": "https://github.com/vercel/commerce",
+    "gallery": [
+      "images/icons/project7-1.png",
+      "images/icons/project7-2.png",
+      "images/icons/project7-3.png"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "تطبيق ملاحظات",
+    "description": "تطبيق لتسجيل وتنظيم الملاحظات.",
+    "image": "images/icons/project8-1.png",
+    "type": "تطبيق",
+    "demo": "https://evernote.com",
+    "code": "https://github.com/BoostIO/Boostnote",
+    "gallery": [
+      "images/icons/project8-1.png",
+      "images/icons/project8-2.png",
+      "images/icons/project8-3.png"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "واجهة تسجيل حساب",
+    "description": "واجهة أنيقة لإنشاء حساب جديد.",
+    "image": "images/icons/project9-1.png",
+    "type": "واجهة",
+    "demo": "https://dribbble.com/tags/sign_up",
+    "code": "https://github.com/frontendbr/login-screens",
+    "gallery": [
+      "images/icons/project9-1.png",
+      "images/icons/project9-2.png",
+      "images/icons/project9-3.png"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "موقع معرض صور",
+    "description": "موقع لعرض الصور في ألبومات منظمة.",
+    "image": "images/icons/project10-1.png",
+    "type": "موقع",
+    "demo": "https://unsplash.com",
+    "code": "https://github.com/unsplash/unsplash-js",
+    "gallery": [
+      "images/icons/project10-1.png",
+      "images/icons/project10-2.png",
+      "images/icons/project10-3.png"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "تطبيق طقس",
+    "description": "تطبيق يعرض حالة الطقس في المدن المختلفة.",
+    "image": "images/icons/project11-1.png",
+    "type": "تطبيق",
+    "demo": "https://weather.com",
+    "code": "https://github.com/buckyroberts/Weather-App",
+    "gallery": [
+      "images/icons/project11-1.png",
+      "images/icons/project11-2.png",
+      "images/icons/project11-3.png"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "واجهة صفحة هبوط",
+    "description": "واجهة جذابة لصفحة هبوط منتج أو خدمة.",
+    "image": "images/icons/project12-1.png",
+    "type": "واجهة",
+    "demo": "https://unbounce.com/landing-page-examples/",
+    "code": "https://github.com/tailwindtoolbox/Landing-Page",
+    "gallery": [
+      "images/icons/project12-1.png",
+      "images/icons/project12-2.png",
+      "images/icons/project12-3.png"
+    ]
+  }
+]

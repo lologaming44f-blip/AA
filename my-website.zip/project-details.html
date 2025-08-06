@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تفاصيل المشروع</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .details-container {
+      max-width: 850px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    /* الصورة الرئيسية */
+    .details-container img.main-image {
+      width: 100%;
+      max-height: 280px;
+      object-fit: contain;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .details-container img.main-image:hover {
+      transform: scale(1.02);
+    }
+
+    .details-container h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    .details-container p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .type-label {
+      display: inline-block;
+      margin-top: 15px;
+      background: #e0f7fa;
+      color: #007c91;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    /* قائمة المميزات */
+    .features {
+      margin-top: 25px;
+      padding: 0;
+      text-align: right;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      color: #444;
+      list-style: none;
+      position: relative;
+      padding-right: 25px;
+    }
+
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      right: 0;
+      color: #4CAF50;
+      font-size: 16px;
+    }
+
+    /* معرض الصور */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    /* الأزرار */
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-link {
+      display: block;
+      width: 80%;
+      text-align: center;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .demo-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .demo-btn:hover {
+      background-color: #43a047;
+    }
+
+    .code-btn {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    .code-btn:hover {
+      background-color: #1976d2;
+    }
+
+    .back-btn {
+      background-color: #555;
+      color: white;
+    }
+
+    .back-btn:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="projects.html">مشاريعي</a></li>
+    </ul>
+  </nav>
+
+  <div id="project-details" class="details-container">
+    <p>جارٍ تحميل تفاصيل المشروع...</p>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+
+    fetch('projects.json')
+      .then(res => res.json())
+      .then(data => {
+        const project = data.find(p => p.id == projectId);
+        if (project) {
+          document.getElementById('project-details').innerHTML = `
+            <img src="${project.image}" class="main-image" alt="${project.title}">
+            <h1>${project.title}</h1>
+            <p>${project.description}</p>
+            <span class="type-label">${project.type}</span>
+
+            <ul class="features">
+              <li>واجهة متجاوبة مع جميع الشاشات</li>
+              <li>كود نظيف ومنظم</li>
+              <li>سهولة التعديل والإضافة</li>
+            </ul>
+
+            <div class="gallery">
+              ${project.gallery && project.gallery.length > 0 
+                ? project.gallery.map(img => `<img src="${img}" alt="صورة إضافية">`).join('')
+                : '<p>لا توجد صور إضافية</p>'
+              }
+            </div>
+
+            <div class="buttons">
+              ${project.demo ? `<a href="${project.demo}" target="_blank" class="btn-link demo-btn">🌐 مشاهدة المشروع</a>` : ""}
+              ${project.code ? `<a href="${project.code}" target="_blank" class="btn-link code-btn">💻 كود المشروع</a>` : ""}
+              <a href="projects.html" class="btn-link back-btn">⬅ رجوع للمشاريع</a>
+            </div>
+          `;
+        } else {
+          document.getElementById('project-details').innerHTML = '<h2>المشروع غير موجود</h2>';
+        }
+      });
+  </script>
+
+</body>
+</html>
